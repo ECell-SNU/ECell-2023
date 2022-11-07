@@ -1,0 +1,7 @@
+.LandingPage {
+  @include make-flex($dir: column, $just: flex-start);
+  @include box($height: unset);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #0f1621;
+}
