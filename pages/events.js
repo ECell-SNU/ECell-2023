@@ -1,0 +1,32 @@
+import Header from "../Components/Common/Header/Header";
+import "./events.scss";
+// import image from "../../Assets/icons/events.svg";
+export default function EventPage() {
+  return (
+    <div className="EventPageWrapper">
+      <Header
+        navItem1="Home"
+        navItem2="About Us"
+        navItem3="Team"
+        routeItem1="/"
+        routeItem2="/#aboutus"
+        routeItem3="/teams"
+      />
+
+      <div className="ContentWrapper">
+        <div className="ContentWrapper__hero">
+          <h1 className="ContentWrapper__hero__subTitle">ENDURE THE</h1>
+          <h1 className="ContentWrapper__hero__title">RAGNAROK</h1>
+          {/* <div className="ContentWrapper__hero__desc">
+            E-Cell Shiv Nadar University strives to provide a platform for
+            students and faculty to create, innovate, incubate and realise their
+            entrepreneurial dreams
+          </div> */}
+        </div>
+      </div>
+      <a href="/events/leaderboard" className="ContentWrapper__RegBtn">
+        View winners
+      </a>
+    </div>
+  );
+}
