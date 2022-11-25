@@ -1,0 +1,50 @@
+@import "../../../styles/root/mixins";
+
+.text-container {
+  width: 490px;
+  &__classifier {
+    font-size: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+
+    p{
+      color: var(--backgroundColour);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: var(--desc-heading-size);
+    color: var(--title-txt-color);
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 129.5%;
+  }
+
+  &__para {
+    width: 100%;
+    font-size: var(--desc-text-size);
+    line-height: 167.5%;
+    color: #cccc;
+  }
+
+  .para1 {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .text-container {
+    margin-bottom: 20px;
+    width: 100%;
+    &__classifier {
+      font-size: 13px;
+    }
+    &__title {
+      font-size: 33px;
+    }
+    &__para {
+      font-size: 13px;
+    }
+  }
+}

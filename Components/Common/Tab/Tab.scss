@@ -1,0 +1,103 @@
+@import "../../../styles/root/mixins";
+
+.TabWrapper {
+  // margin-top: 50px;
+  color: #ffffff;
+  width: 500px;
+  @include make-flex();
+  gap: 20px;
+
+  &__TabButtonContainer {
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-left: 1.5rem;
+    width: 200px;
+    &--TabButton {
+      width: 100px;
+      height: 35px;
+      @include make-flex();
+      border-radius: 7px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: unset;
+      z-index: 1;
+      color: #ffffff;
+    }
+    &--indicator {
+      position: absolute;
+      background: var(--archive-card-background);
+      width: 100px;
+      height: 35px;
+      z-index: 0;
+      border-radius: 12px;
+
+      transition: all 0.5s;
+    }
+  }
+  &__ContentContainer {
+    width: 500px;
+    height: auto;
+    border-radius: 30px;
+    background-color: var(--archive-card-background);
+    padding: 2.8rem;
+    position: relative;
+    margin-top: 2rem;
+    font-size: 14px;
+
+    img {
+      border-radius: 50%;
+      height: 2.7rem;
+      width: 2.7rem;
+      position: absolute;
+      top: -15%;
+      left: 3%;
+      padding: 8px;
+      box-sizing: border-box;
+      background-color: var(--archive-card-icon-background);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    &--TabContent {
+      background-color: unset;
+      padding: 5px;
+    }
+  }
+}
+
+@keyframes TabFadein {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .TabWrapper {
+    &__TabButtonContainer {
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .TabWrapper {
+    width: 100%;
+    &__ContentContainer {
+      width: 100%;
+    }
+    &__title {
+      font-size: 38px;
+    }
+  }
+}

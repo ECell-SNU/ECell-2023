@@ -1,0 +1,51 @@
+@import "../../../styles/root/mixins";
+
+.ThinkTankSectionWrapper {
+  height: 100vh;
+  scroll-snap-align: start;
+  @include make-flex();
+
+  &__content-container {
+    @include make-flex($dir: row, $just: space-between);
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  .ThinkTankSectionWrapper {
+    height: unset;
+    &__content-container {
+      @include make-flex($dir: column-reverse, $align: center);
+      width: 100%;
+      gap: 35px;
+    }
+  }
+}
+.animationWrapper {
+  position: relative;
+}
+.animation-holder {
+  width: 35rem;
+}
+
+.animation-motion {
+  position: absolute;
+  width: 13.8rem;
+  background: rgba(0, 0, 0, 0);
+  top: 235px;
+  left: 265px;
+  animation-name: example;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes example {
+  0% {
+    top: 235px;
+    left: 265px;
+  }
+  100% {
+    top: 200px;
+    left: 265px;
+  }
+}
